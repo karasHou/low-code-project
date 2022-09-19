@@ -1,0 +1,10 @@
+# IDE
+.vscode/
+.idea/
+yarn.lock
+
+node_modules
+docs/
+docs-raw/
+
+data

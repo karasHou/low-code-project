@@ -1,0 +1,48 @@
+{
+  "name": "low-code-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "pnpm run dev",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "commit": "git-cz",
+    "preinstall": "npx -y only-allow pnpm"
+  },
+  "dependencies": {
+    "only-allow": "^1.1.1",
+    "vue": "^3.2.37"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.{tsx,ts}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.9.2",
+    "git-cz": "^4.9.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "naive-ui": "^2.33.3",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.7",
+    "vue-tsc": "^0.39.5"
+  }
+}
